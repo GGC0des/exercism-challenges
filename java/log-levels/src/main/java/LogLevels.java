@@ -18,12 +18,34 @@ public class LogLevels {
        */
       int colonIndex = logLine.indexOf(":");
       return logLine.substring(colonIndex + 1).trim();
-
     }
 
     public static String logLevel(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLevels.logLevel() method");
+      //  throw new UnsupportedOperationException("Please implement the (static) LogLevels.logLevel() method");
+      /* Solution 1 Using indexOF () and substring()
+       *
+       */
+      int endIndex = logLine.indexOf("]");
+      return logLine.substring(1, endIndex).toLowerCase();
+
+      // int endIndex = logLine.indexOf("]");
+
+      // if (endIndex != -1) {
+      //     return logLine.substring(1, endIndex).toLowerCase(); // Get log level from index 1 to endIndex
+      // }
+
+      // return ""; // Return empty if no closing bracket is found
+
+// // Find the first and last square brackets to extract the log level
+// int startIndex = logLine.indexOf("[") + 1;
+// int endIndex = logLine.indexOf("]");
+// return logLine.substring(startIndex, endIndex).toLowerCase(Locale.ROOT);
+
+// //
+// return logLine.split(":")[0].replaceAll("(\\[|\\])", "").toLowerCase(Locale.ROOT);
+
     }
+
 
     public static String reformat(String logLine) {
         throw new UnsupportedOperationException("Please implement the (static) LogLevels.reformat() method");
