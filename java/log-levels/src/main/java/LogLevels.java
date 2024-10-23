@@ -48,6 +48,10 @@ public class LogLevels {
 
 
     public static String reformat(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLevels.reformat() method");
+      // throw new UnsupportedOperationException("Please implement the (static) LogLevels.reformat() method");
+      String formattedMessage = LogLevels.message(logLine);
+      String formattedLog = LogLevels.logLevel(logLine);
+      String reformatedLog = formattedMessage + " (" + formattedLog + ")";
+      return reformatedLog;
     }
 }
