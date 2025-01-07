@@ -58,10 +58,9 @@ class BirdWatcher {
      for (int i : birdsPerDay) {
       if (i == 0) {
         return true;
-      } else {
-        return false;
       }
-     }
+    }
+    return false;
     }
 
     public int getCountForFirstDays(int numberOfDays) {
