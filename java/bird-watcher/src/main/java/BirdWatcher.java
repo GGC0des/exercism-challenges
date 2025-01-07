@@ -44,8 +44,8 @@ class BirdWatcher {
       // Note: does not need to clone the value since int are primitives and immutable (original value remains in the same memory and instead reassigns the variable to hold a new value)
     }
 
-    // method to increment by 1
     public void incrementTodaysCount() {
+      // method to increment by 1
       if (birdsPerDay.length > 0) {
         birdsPerDay[birdsPerDay.length - 1] += 1;
         // Note: final keyword allows for array to be populated
@@ -55,11 +55,21 @@ class BirdWatcher {
     }
 
     public boolean hasDayWithoutBirds() {
-        throw new UnsupportedOperationException("Please implement the BirdWatcher.hasDayWithoutBirds() method");
+     for (int i : birdsPerDay) {
+      if (i == 0) {
+        return true;
+      } else {
+        return false;
+      }
+     }
     }
 
     public int getCountForFirstDays(int numberOfDays) {
-        throw new UnsupportedOperationException("Please implement the BirdWatcher.getCountForFirstDays() method");
+      int sumOfFristDays = 0;
+      for (int i = 0; i < numberOfDays; i++) {
+        sumOfFristDays += birdsPerDay[i];
+      }
+      return sumOfFristDays;
     }
 
     public int getBusyDays() {
