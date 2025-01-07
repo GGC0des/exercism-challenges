@@ -6,11 +6,13 @@ See [Exercism Java Track](https://exercism.org/tracks/java) for more info.
 
 ## Concepts covered by coding challenges
 
-Currently mastered the following concepts:
+Currently solved challenges addressed:
 
-* Java Bascis
-* Java Strings
-* Java Booleans
-* Java If-Else Statments
-* Java Numbers
+* Java Basics
+* Primitive Data Types
+* Conditional Logic
+* Booleans
+* Arrays
+* For Loop, For-Each Loop
+* Mutability vs. Immutablity (eg. return a clone to prevent external modification of the internal array)
 
