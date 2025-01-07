@@ -14,5 +14,6 @@ Currently solved challenges addressed:
 * Booleans
 * Arrays
 * For Loop, For-Each Loop
-* Mutability vs. Immutablity (eg. return a clone to prevent external modification of the internal array)
+* Mutability vs. Immutablity
+* --> e.g.: Return a clone to prevent external modification of the internal array
 
