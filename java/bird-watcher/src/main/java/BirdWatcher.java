@@ -65,6 +65,10 @@ class BirdWatcher {
 
     public int getCountForFirstDays(int numberOfDays) {
       int sumOfFristDays = 0;
+      // Test required numberOfDays > birdsPerDay.length to return a sum - personally, I would throw an exception here
+      if (numberOfDays > birdsPerDay.length) {
+        numberOfDays = birdsPerDay.length;
+      }
       for (int i = 0; i < numberOfDays; i++) {
         sumOfFristDays += birdsPerDay[i];
       }
