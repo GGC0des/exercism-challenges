@@ -12,13 +12,17 @@ class SqueakyClean {
         identifier = kebabToCamelCase(identifier);
       }
 
+      // Step 3: Convert leetspeak to text
+      if (containsLeetspeak(identifier)) {
+        identifier = leetspeakToText(identifier);
+      }
 
       return identifier;
 
     }
 
 
-    // method to convert kebab-case to camelCase
+    // Method to convert kebab-case to camelCase
     private static String kebabToCamelCase(String input) {
     String[] parts = input.split("-");
     // solution with Stringbuilder for more efficiency
@@ -35,5 +39,20 @@ class SqueakyClean {
     //   result += parts[i].substring(0, 1).toUpperCase() + parts[i].substring(1).toLowerCase();
     // }
     // return result;
+    }
+
+    // Method to check for leetspeak
+    private static boolean containsLeetspeak(String input) {
+      return input.contains("4") || input.contains("3") || input.contains("0") || input.contains("1") || input.contains("7");
+    }
+
+    // Method to convert leetspeak to normal text
+    private static String leetspeakToText(String input) {
+      return input.replace("4", "a")
+                  .replace("3", "e")
+                  .replace("0", "o")
+                  .replace("1", "l")
+                  .replace("7", "t");
+
     }
   }
