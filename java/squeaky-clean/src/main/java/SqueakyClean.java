@@ -7,15 +7,18 @@ class SqueakyClean {
       // Step 1: Replace spaces with underscores
       identifier = identifier.replace(" ","_");
 
+      // Step 3: Convert leetspeak to text before CamelCase conversion i.e. y0u-4r3-my-w0rld to turn into youAreMyWorld instead of youareMyWorld
+      if (containsLeetspeak(identifier)) {
+        identifier = leetspeakToText(identifier);
+      }
+
       // Step 2: Convert kebab-case to camelCase
       if (identifier.contains("-")) {
         identifier = kebabToCamelCase(identifier);
       }
 
-      // Step 3: Convert leetspeak to text
-      if (containsLeetspeak(identifier)) {
-        identifier = leetspeakToText(identifier);
-      }
+      // Step 4: Remove any characters that are NOT letters, numbers, spaces, or underscores
+      identifier = identifier.replaceAll("[^a-zA-Z0-9_ ]", "");
 
       return identifier;
 
