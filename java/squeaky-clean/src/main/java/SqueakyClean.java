@@ -7,7 +7,7 @@ class SqueakyClean {
       // Step 1: Replace spaces with underscores
       identifier = identifier.replace(" ","_");
 
-      // Step 3: Convert leetspeak to text before CamelCase conversion i.e. y0u-4r3-my-w0rld to turn into youAreMyWorld instead of youareMyWorld
+      // Step 3: Convert leetspeak to text BEFORE CamelCase conversion i.e. y0u-4r3-my-w0rld to turn into youAreMyWorld instead of youareMyWorld
       if (containsLeetspeak(identifier)) {
         identifier = leetspeakToText(identifier);
       }
@@ -44,6 +44,7 @@ class SqueakyClean {
     // return result;
     }
 
+    
     // Method to check for leetspeak
     private static boolean containsLeetspeak(String input) {
       return input.contains("4") || input.contains("3") || input.contains("0") || input.contains("1") || input.contains("7");
