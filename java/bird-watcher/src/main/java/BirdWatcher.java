@@ -14,7 +14,7 @@ class BirdWatcher {
         //}
     }
 
-
+      
 
     public int[] getLastWeek() {
       // accessor method for birdsPerDay which according to exerc. == lastWeek[]
