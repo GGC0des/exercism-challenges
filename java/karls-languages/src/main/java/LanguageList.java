@@ -9,11 +9,13 @@ public class LanguageList {
     }
 
     public void addLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the addLanguage() method");
+      languages.add(language);
+      System.out.println(languages);
     }
 
     public void removeLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the removeLanguage() method");
+      languages.remove(language);
+      System.out.println(language + " has been removed from your List.");
     }
 
     public String firstLanguage() {
