@@ -5,30 +5,40 @@ public class LanguageList {
     private final List<String> languages = new ArrayList<>();
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Please implement the isEmpty() method");
+      return languages.isEmpty();
     }
 
     public void addLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the addLanguage() method");
+      languages.add(language);
+      System.out.println(languages);
     }
 
     public void removeLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the removeLanguage() method");
+      languages.remove(language);
+      System.out.println(language + " has been removed from your List.");
     }
 
     public String firstLanguage() {
-        throw new UnsupportedOperationException("Please implement the firstLanguage() method");
+      if (languages.isEmpty()) {
+        throw new IllegalStateException("The list of languages is empty!");
+      }
+      return languages.get(0);
     }
 
     public int count() {
-        throw new UnsupportedOperationException("Please implement the count() method");
+      return languages.size();
+      // alternatively using a for loop
+      //  int count = 0;
+      //  for (String language : languages) {
+      //      count++;
+      //  }
     }
 
     public boolean containsLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the containsLanguage() method");
+      return languages.contains(language);
     }
 
     public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
+      return (containsLanguage("Java") || containsLanguage("Kotlin")); // containsLanguage method is part of LanguageList class, not part of the List class. Needs to be called directly without prefixing it with List object languages
     }
 }
