@@ -35,10 +35,10 @@ public class LanguageList {
     }
 
     public boolean containsLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the containsLanguage() method");
+      return languages.contains(language);
     }
 
     public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
+      return (containsLanguage("Java") || containsLanguage("Kotlin")); // containsLanguage method is part of LanguageList class, not part of the List class. Needs to be called directly without prefixing it with List object languages
     }
 }
