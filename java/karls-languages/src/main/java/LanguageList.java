@@ -26,7 +26,12 @@ public class LanguageList {
     }
 
     public int count() {
-        throw new UnsupportedOperationException("Please implement the count() method");
+      return languages.size();
+      // alternatively using a for loop
+      //  int count = 0;
+      //  for (String language : languages) {
+      //      count++;
+      //  }
     }
 
     public boolean containsLanguage(String language) {
