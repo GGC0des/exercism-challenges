@@ -19,13 +19,13 @@ class NeedForSpeed {
 
     public void drive() {
       if (battery >= batteryDrain) {
-        distanceDriven += this.speed;
-        battery -= this.batteryDrain;
+        distanceDriven += speed;
+        battery -= batteryDrain;
       }
     }
 
     public static NeedForSpeed nitro() {
-      return new NeedForSpeed(50, 5);
+      return new NeedForSpeed(50, 4);
     }
 }
 
