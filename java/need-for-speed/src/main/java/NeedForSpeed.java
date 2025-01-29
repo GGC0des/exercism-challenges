@@ -2,7 +2,7 @@ class NeedForSpeed {
   public int speed;
   public int batteryDrain;
   public int battery = 100;
-  private int distanceDriven = 0;
+  public int distanceDriven = 0;
 
   public NeedForSpeed(int speed, int batteryDrain) {
     this.speed = speed;
@@ -30,7 +30,7 @@ class NeedForSpeed {
 }
 
 class RaceTrack {
-  private int distance;
+  public int distance;
 
     RaceTrack(int distance) {
       this.distance = distance;
