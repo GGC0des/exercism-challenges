@@ -8,11 +8,13 @@ public class SalaryCalculator {
     }
 
     public int bonusMultiplier(int productsSold) {
-        throw new UnsupportedOperationException("Please implement the SalaryCalculator.bonusMultiplier() method");
+      int value = productsSold < 20 ? 10 : 13;
+      return value;
     }
 
     public double bonusForProductsSold(int productsSold) {
-        throw new UnsupportedOperationException("Please implement the SalaryCalculator.bonusForProductsSold() method");
+      double value = bonusMultiplier(productsSold) * productsSold;
+      return value;
     }
 
     public double finalSalary(int daysSkipped, int productsSold) {
