@@ -7,12 +7,12 @@ public class ElonsToyCar {
     }
 
     public String distanceDisplay() {
-      return "Driven " + distanceDriven + " meters";
+      return String.format("Driven %d meters", distanceDriven);
     }
 
     public String batteryDisplay() {
       if (batteryLevel >= 1) {
-        return "Battery at " + batteryLevel + "%";
+        return String.format("Battery at %d%%", batteryLevel);
       }
       return "Battery empty";
     }
