@@ -1,19 +1,26 @@
 public class ElonsToyCar {
+    private int distanceDriven;
+    private int batteryLevel = 100;
+
     public static ElonsToyCar buy() {
       return new ElonsToyCar();
     }
 
     public String distanceDisplay() {
-      String initialDistance = "Driven 0 meters";
-      return initialDistance;
+      return "Driven " + distanceDriven + " meters";
     }
 
     public String batteryDisplay() {
-      String initialBattery = "Battery at 100%";
-      return initialBattery;
+      if (batteryLevel >= 1) {
+        return "Battery at " + batteryLevel + "%";
+      }
+      return "Battery empty";
     }
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ElonsToyCar.drive()  method");
+      if (batteryLevel >= 1) {
+        distanceDriven += 20;
+        batteryLevel -= 1;
+      }
     }
 }
