@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SalaryCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-01-29T10:36:02" hostname="SHRSHY.fritz.box" time="0.304">
+<testsuite name="SalaryCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-01-29T10:43:07" hostname="SHRSHY.fritz.box" time="0.55">
   <properties/>
-  <testcase name="The bonusForProductsSold method returns the right result" classname="SalaryCalculatorTest" time="0.138"/>
-  <testcase name="The finalSalary method returns the correct result capped at maximum salary" classname="SalaryCalculatorTest" time="0.003"/>
-  <testcase name="The finalSalary method returns the regular salary without multiplier and bonus" classname="SalaryCalculatorTest" time="0.002"/>
-  <testcase name="The bonusMultiplier method returns 10 when productsSold is below the threshold" classname="SalaryCalculatorTest" time="0.01"/>
-  <testcase name="The bonusMultiplier method returns 13 when productsSold is equal to the threshold" classname="SalaryCalculatorTest" time="0.002"/>
-  <testcase name="The bonusMultiplier method returns 13 when productsSold is above the threshold" classname="SalaryCalculatorTest" time="0.003"/>
-  <testcase name="The salaryMultiplier method returns 1.0 when daysSkipped is below the threshold" classname="SalaryCalculatorTest" time="0.002"/>
-  <testcase name="The salaryMultiplier method returns 0.85 when daysSkipped is equal to the threshold" classname="SalaryCalculatorTest" time="0.003"/>
-  <testcase name="The bonusMultiplier method returns 0.85 when daysSkipped is above the threshold" classname="SalaryCalculatorTest" time="0.005"/>
-  <testcase name="The finalSalary method returns the correct result when daysSkipped above threshold" classname="SalaryCalculatorTest" time="0.003"/>
-  <testcase name="The finalSalary method returns the correct result when daysSkipped and productsSold below threshold" classname="SalaryCalculatorTest" time="0.062"/>
+  <testcase name="The bonusForProductsSold method returns the right result" classname="SalaryCalculatorTest" time="0.164"/>
+  <testcase name="The finalSalary method returns the correct result capped at maximum salary" classname="SalaryCalculatorTest" time="0.007"/>
+  <testcase name="The finalSalary method returns the regular salary without multiplier and bonus" classname="SalaryCalculatorTest" time="0.003"/>
+  <testcase name="The bonusMultiplier method returns 10 when productsSold is below the threshold" classname="SalaryCalculatorTest" time="0.025"/>
+  <testcase name="The bonusMultiplier method returns 13 when productsSold is equal to the threshold" classname="SalaryCalculatorTest" time="0.003"/>
+  <testcase name="The bonusMultiplier method returns 13 when productsSold is above the threshold" classname="SalaryCalculatorTest" time="0.069"/>
+  <testcase name="The salaryMultiplier method returns 1.0 when daysSkipped is below the threshold" classname="SalaryCalculatorTest" time="0.039"/>
+  <testcase name="The salaryMultiplier method returns 0.85 when daysSkipped is equal to the threshold" classname="SalaryCalculatorTest" time="0.052"/>
+  <testcase name="The bonusMultiplier method returns 0.85 when daysSkipped is above the threshold" classname="SalaryCalculatorTest" time="0.011"/>
+  <testcase name="The finalSalary method returns the correct result when daysSkipped above threshold" classname="SalaryCalculatorTest" time="0.011"/>
+  <testcase name="The finalSalary method returns the correct result when daysSkipped and productsSold below threshold" classname="SalaryCalculatorTest" time="0.034"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
