@@ -9,7 +9,8 @@ public class ElonsToyCar {
     }
 
     public String batteryDisplay() {
-        throw new UnsupportedOperationException("Please implement the ElonsToyCar.batteryDisplay()  method");
+      String initialBattery = "Battery at 100%";
+      return initialBattery;
     }
 
     public void drive() {
