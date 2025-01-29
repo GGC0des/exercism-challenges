@@ -1,8 +1,5 @@
 public class SalaryCalculator {
     public double salaryMultiplier(int daysSkipped) {
-      // boolean expr = daysSkipped < 5;
-      // double multiplier = expr ? 1.0 : 0.85;
-      // return multiplier;
       double value = daysSkipped < 5 ? 1.0 : 0.85;
       return value;
     }
@@ -20,7 +17,7 @@ public class SalaryCalculator {
     public double finalSalary(int daysSkipped, int productsSold) {
       double baseSalary = 1000.00;
       double salary = baseSalary * salaryMultiplier(daysSkipped) + bonusForProductsSold(productsSold);
-      double capped = salary < 2000.00 ? salary : 2000.00;
-      return capped;
+      double value = salary < 2000.00 ? salary : 2000.00;
+      return value;
     }
 }
