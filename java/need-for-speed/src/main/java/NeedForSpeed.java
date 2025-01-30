@@ -37,7 +37,12 @@ class RaceTrack {
     }
 
     public boolean canFinishRace(NeedForSpeed car) {
-      int totalBatteryDrain = (car.distanceDriven() / car.speed) * car.batteryDrain;
-      return totalBatteryDrain <= car.battery;
+      int currentBattery = car.battery;
+      int currentDistance = 0;
+      while (currentBattery >= car.batteryDrain && currentDistance < distance) {
+        currentDistance += car.speed;
+        currentBattery -= car.batteryDrain;
+      }
+      return currentDistance >= distance;
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="NeedForSpeedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-29T17:18:42" hostname="SHRSHY.fritz.box" time="0.385">
+<testsuite name="NeedForSpeedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-30T17:32:54" hostname="SHRSHY.fritz.box" time="0.104">
   <properties/>
-  <testcase name="The batteryDrained method returns false when nitro battery did not completely drain after driving" classname="NeedForSpeedTest" time="0.385"/>
+  <testcase name="The canFinishRace method returns false when car just cannot finish a race" classname="NeedForSpeedTest" time="0.104"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
