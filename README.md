@@ -28,8 +28,9 @@ Currently solved challenges address:
 * Lists
 * Ternary Operators
  - Second iteration to return ternary operational value in return statement instead of storing it in a variable first
-* Classes
+* Classes & Constructors
   - Implemented private vs. public fields, constructor, getter & setter methods, conditional logic to update instance fields depending on its value and a limiter
   - Refactored code in second iteration to use format specifiers instead of concatenating the String in the return statement
+  - Refactored code in secod iteration of NeedForSpeed challenge to use public methods and getter methods instead of instance fields (now private) to impelement canFinishRace() method in RaceTrack class 
 * Inheritance
   - Override superclass methods for its subclasses 
