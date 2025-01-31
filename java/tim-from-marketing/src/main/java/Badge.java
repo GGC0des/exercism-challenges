@@ -11,4 +11,7 @@ class Badge {
       }
       return String.format("[%d] - %s - %s", id , name, department.toUpperCase());
     }
+
+    // using ternary operators
+    // return ((id == null) ? "" : "["+id+"] - ")+name+" - "+((department == null) ? "OWNER" : department.toUpperCase());
 }
