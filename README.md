@@ -28,6 +28,7 @@ Currently solved challenges address:
 * Lists
 * Ternary Operators
  - Second iteration to return ternary operational value in return statement instead of storing it in a variable first
+* Nullability
 * Classes & Constructors
   - Implemented private vs. public fields, constructor, getter & setter methods, conditional logic to update instance fields depending on its value and a limiter
   - Refactored code in second iteration to use format specifiers instead of concatenating the String in the return statement
