@@ -4,7 +4,7 @@ class CaptainsLog {
 
     private static final char[] PLANET_CLASSES = new char[]{'D', 'H', 'J', 'K', 'L', 'M', 'N', 'R', 'T', 'Y'};
 
-    private Random random; // allows to pass instance with a prediefined seed to make test results predicatable for testing
+    private Random random; // constructor allows to pass instance with a prediefined seed to make test results predicatable
 
     CaptainsLog(Random random) {
         this.random = random;
@@ -17,7 +17,7 @@ class CaptainsLog {
     }
 
     String randomShipRegistryNumber() {
-        throw new UnsupportedOperationException("Please implement the CaptainsLog.randomShipRegistryNumber() method");
+      return "NCC-" + (1000 + random.nextInt(9000));
     }
 
     double randomStardate() {
