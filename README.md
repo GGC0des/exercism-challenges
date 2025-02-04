@@ -34,4 +34,7 @@ Currently solved challenges address:
   - Refactored code in second iteration to use format specifiers instead of concatenating the String in the return statement
   - Refactored code in secod iteration of NeedForSpeed challenge to use public methods and getter methods instead of instance fields (now private) to impelement canFinishRace() method in RaceTrack class 
 * Inheritance
-  - Override superclass methods for its subclasses 
+  - Override superclass methods for its subclasses
+* Randomness in Java
+* Date-Time
+  - Ensured default Locale formatting bug is fixed 
