@@ -11,9 +11,7 @@ class CaptainsLog {
     }
 
     char randomPlanetClass() {
-      char[] planetaryClasses = {'D','H', 'J', 'K', 'L', 'M', 'N', 'R', 'T', 'Y'};
-      int randomIndex = random.nextInt(planetaryClasses.length);
-      return planetaryClasses[randomIndex];
+      return PLANET_CLASSES[random.nextInt(PLANET_CLASSES.length)];
     }
 
     String randomShipRegistryNumber() {
