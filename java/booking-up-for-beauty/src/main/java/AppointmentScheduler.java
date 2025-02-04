@@ -1,9 +1,11 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 class AppointmentScheduler {
     public LocalDateTime schedule(String appointmentDateDescription) {
-        throw new UnsupportedOperationException("Please implement the AppointmentScheduler.schedule() method");
+      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy HH:mm:ss");
+      return LocalDateTime.parse(appointmentDateDescription, formatter);
     }
 
     public boolean hasPassed(LocalDateTime appointmentDate) {
