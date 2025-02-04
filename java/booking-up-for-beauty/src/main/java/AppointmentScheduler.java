@@ -9,7 +9,7 @@ class AppointmentScheduler {
     }
 
     public boolean hasPassed(LocalDateTime appointmentDate) {
-        throw new UnsupportedOperationException("Please implement the AppointmentScheduler.hasPassed() method");
+      return appointmentDate.isBefore(LocalDateTime.now());
     }
 
     public boolean isAfternoonAppointment(LocalDateTime appointmentDate) {
