@@ -9,6 +9,7 @@ class DnDCharacter {
   private int intelligence;
   private int wisdom;
   private int charisma;
+  private int hp;
 
   public DnDCharacter() {
     initializeAbility();
@@ -21,6 +22,7 @@ class DnDCharacter {
     this.intelligence = ability("Intelligence", rollDice());
     this.wisdom = ability("Wisdom", rollDice());
     this.charisma = ability("Charisma", rollDice());
+    this.hp = modifier(getConstitution());
   }
 
 
@@ -65,7 +67,7 @@ class DnDCharacter {
     }
 
     int getHitpoints() {
-      return constitution * 2;
+      return hp;
     }
 }
 
