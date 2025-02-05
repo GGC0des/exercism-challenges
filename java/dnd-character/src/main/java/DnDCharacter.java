@@ -22,7 +22,7 @@ class DnDCharacter {
     this.intelligence = ability("Intelligence", rollDice());
     this.wisdom = ability("Wisdom", rollDice());
     this.charisma = ability("Charisma", rollDice());
-    this.hp = modifier(getConstitution());
+    this.hp = 10 + modifier(getConstitution());
   }
 
 
@@ -37,8 +37,8 @@ class DnDCharacter {
       return diceroller.roll4D6();
     }
 
-    int modifier(int score) {
-      return (score -10) / 2;
+    int modifier(int input) {
+      return (input -10) / 2;
     }
 
     int getStrength() {
