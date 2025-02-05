@@ -9,6 +9,7 @@ class DnDCharacter {
   private int intelligence;
   private int wisdom;
   private int charisma;
+  private int hp;
 
   public DnDCharacter() {
     initializeAbility();
@@ -21,6 +22,7 @@ class DnDCharacter {
     this.intelligence = ability("Intelligence", rollDice());
     this.wisdom = ability("Wisdom", rollDice());
     this.charisma = ability("Charisma", rollDice());
+    this.hp = 10 + modifier(getConstitution());
   }
 
 
@@ -65,22 +67,7 @@ class DnDCharacter {
     }
 
     int getHitpoints() {
-      return constitution * 2;
+      return return hp;
     }
 }
 
-// public class DiceRoller {
-//   private final Random random;
-
-//   public DiceRoller() {
-//     this.random = new Random();
-//   }
-
-//   public List<Integer> roll4D6() {
-//     List<Integer> diceValues = new ArrayList<>();
-//     for (int i = 0; i < 4; i++) {
-//       diceValues.add(random.nextInt(6) + 1);
-//     }
-//     return diceValues;
-//   }
-// }
