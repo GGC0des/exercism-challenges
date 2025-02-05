@@ -12,6 +12,10 @@ class DnDCharacter {
   private int charisma;
 
   public DnDCharacter() {
+    initializeAbility();
+  }
+
+  private void initializeAbility() {
     this.strength = ability(rollDice());
     this.dexterity = ability(rollDice());
     this.constitution = ability(rollDice());
@@ -30,8 +34,8 @@ class DnDCharacter {
       return diceroller.roll4D6();
     }
 
-    int modifier(int constitution) {
-      return (constitution -10) / 2;
+    int modifier(int score) {
+      return (score -10) / 2;
     }
 
     int getStrength() {
