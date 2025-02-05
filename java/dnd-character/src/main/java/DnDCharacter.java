@@ -1,6 +1,5 @@
-// import java.util.ArrayList;
 import java.util.List;
-// import java.util.Random;
+
 
 class DnDCharacter {
   private final DiceRoller diceroller = new DiceRoller();
@@ -16,18 +15,20 @@ class DnDCharacter {
   }
 
   private void initializeAbility() {
-    this.strength = ability(rollDice());
-    this.dexterity = ability(rollDice());
-    this.constitution = ability(rollDice());
-    this.intelligence = ability(rollDice());
-    this.wisdom = ability(rollDice());
-    this.charisma = ability(rollDice());
+    this.strength = ability("Strength", rollDice());
+    this.dexterity = ability("Dexterity", rollDice());
+    this.constitution = ability("Constitution", rollDice());
+    this.intelligence = ability("Intelligence", rollDice());
+    this.wisdom = ability("Wisdom", rollDice());
+    this.charisma = ability("Charisma", rollDice());
   }
 
 
-    private int ability(List<Integer> scores) {
+    private int ability(String abilityName, List<Integer> scores) {
       scores.sort(Integer::compareTo);
-      return scores.get(1) + scores.get(2) + scores.get(3);
+      int sum = scores.get(1) + scores.get(2) + scores.get(3);
+      System.out.println("You rolled " + scores.get(0) + ", " + scores.get(1) + ", " + scores.get(2) + ", " + scores.get(3) + ". Your " + abilityName + " is " + sum + " (" + scores.get(1) + "+" + scores.get(2) + "+" + scores.get(3) + ").");
+      return sum;
     }
 
     private List<Integer> rollDice() {
