@@ -30,36 +30,37 @@ class DnDCharacter {
       return diceroller.roll4D6();
     }
 
-    int modifier(int input) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+    int modifier(int constitution) {
+      return (constitution -10) / 2;
     }
 
     int getStrength() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return strength;
     }
 
     int getDexterity() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return dexterity;
     }
 
     int getConstitution() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return constitution;
     }
 
     int getIntelligence() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return intelligence;
     }
 
+
     int getWisdom() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return wisdom;
     }
 
     int getCharisma() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return charisma;
     }
 
     int getHitpoints() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return constitution * 2;
     }
 }
 
