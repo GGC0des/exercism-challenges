@@ -10,6 +10,7 @@ class DnDCharacter {
         "Intelligence", "Wisdom", "Charisma");
   private final int hp;
 
+
   public DnDCharacter() {
     initializeAbilities();
     this.hp = 10 + modifier(getAbilities().get("Constitution"));
@@ -23,6 +24,7 @@ class DnDCharacter {
       abilities.put(abilityName, abilityScore);
     }
   }
+
 
 
     protected int ability(List<Integer> scores) {
@@ -84,3 +86,4 @@ class DnDCharacter {
       return abilityNames;
     }
 }
+
