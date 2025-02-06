@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DnDCharacterTest" tests="28" skipped="27" failures="0" errors="0" timestamp="2025-02-06T13:03:22" hostname="SHRSHY.fritz.box" time="0.319">
+  <properties/>
+  <testcase name="testAbilityCalculationsUses3LargestNumbersFromScoresInDescendingOrder()" classname="DnDCharacterTest" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore3IsNegative4()" classname="DnDCharacterTest" time="0.153"/>
+  <testcase name="testAbilityCalculationsUses3LargestNumbersFromScoresInRandomOrder()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore4IsNegative3()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore5IsNegative3()" classname="DnDCharacterTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore10Is0()" classname="DnDCharacterTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore11Is0()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore12Is1()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore13Is1()" classname="DnDCharacterTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore14Is2()" classname="DnDCharacterTest" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore15Is2()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore16Is3()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore17Is3()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore18Is4()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testEachAbilityIsOnlyCalculatedOnce()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore6IsNegative2()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore7IsNegative2()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore8IsNegative1()" classname="DnDCharacterTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityModifierForScore9IsNegative1()" classname="DnDCharacterTest" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityCalculationsWithTwoLowestNumbers()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityCalculationsUses3LargestNumbersFromFromScoresInAscendingOrder()" classname="DnDCharacterTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="testUniqueCharacterIsCreated()" classname="DnDCharacterTest" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityCalculationDoesNotChangeInputScores()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityCalculationsWithLowestEqualNumbers()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testRandomCharacterIsValid()" classname="DnDCharacterTest" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase name="testAbilityCalculationsWithHighestEqualNumbers()" classname="DnDCharacterTest" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase name="testDiceValuesBetween1And6()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="test4DiceWereUsedForRollingScores()" classname="DnDCharacterTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

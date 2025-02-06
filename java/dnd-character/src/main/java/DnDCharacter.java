@@ -1,73 +1,89 @@
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
 
 class DnDCharacter {
   private final DiceRoller diceroller = new DiceRoller();
-  private int strength;
-  private int dexterity;
-  private int constitution;
-  private int intelligence;
-  private int wisdom;
-  private int charisma;
-  private int hp;
+  private final Map<String, Integer> abilities = new HashMap<>();
+  private final Map<String, List<Integer>> diceRolls = new HashMap<>();
+  private final List<String> abilityNames = List.of("Strength", "Dexterity", "Constitution",
+        "Intelligence", "Wisdom", "Charisma");
+  private final int hp;
+
 
   public DnDCharacter() {
-    initializeAbility();
+    initializeAbilities();
+    this.hp = 10 + modifier(getAbilities().get("Constitution"));
   }
 
-  private void initializeAbility() {
-    this.strength = ability("Strength", rollDice());
-    this.dexterity = ability("Dexterity", rollDice());
-    this.constitution = ability("Constitution", rollDice());
-    this.intelligence = ability("Intelligence", rollDice());
-    this.wisdom = ability("Wisdom", rollDice());
-    this.charisma = ability("Charisma", rollDice());
-    this.hp = 10 + modifier(getConstitution());
+  private void initializeAbilities() {
+    for (String abilityName : abilityNames) {
+      List<Integer> rolls = rollDice();
+      diceRolls.put(abilityName, rolls);
+      int abilityScore = ability(rolls);
+      abilities.put(abilityName, abilityScore);
+    }
   }
 
 
-    private int ability(String abilityName, List<Integer> scores) {
-      scores.sort(Integer::compareTo);
-      int sum = scores.get(1) + scores.get(2) + scores.get(3);
-      System.out.println("You rolled " + scores.get(0) + ", " + scores.get(1) + ", " + scores.get(2) + ", " + scores.get(3) + ". Your " + abilityName + " is " + sum + " (" + scores.get(1) + "+" + scores.get(2) + "+" + scores.get(3) + ").");
-      return sum;
+
+    protected int ability(List<Integer> scores) {
+      return scores.stream()                      // Convert immutable list into stream (or alternatively store in mutable new ArrayList)
+                   .sorted((a,b) -> b - a)        // Sort in descending order
+                   .limit(3)              // Use first 3 largest elements
+                   .mapToInt(Integer::intValue)   // Convert Integer objects to int primitives
+                   .sum();                        // Sum the values
     }
 
-    private List<Integer> rollDice() {
+
+
+    protected List<Integer> rollDice() {
       return diceroller.roll4D6();
     }
 
-    int modifier(int score) {
-      return (score -10) / 2;
+    int modifier(int input) {
+      return Math.floorDiv(input -10, 2);
     }
 
     int getStrength() {
-      return strength;
+      return abilities.get("Strength");
     }
 
     int getDexterity() {
-      return dexterity;
+      return abilities.get("Dexterity");
     }
 
     int getConstitution() {
-      return constitution;
+      return abilities.get("Constitution");
     }
 
     int getIntelligence() {
-      return intelligence;
+      return abilities.get("Intelligence");
     }
 
 
     int getWisdom() {
-      return wisdom;
+      return abilities.get("Wisdom");
     }
 
     int getCharisma() {
-      return charisma;
+      return abilities.get("Charisma");
     }
 
     int getHitpoints() {
-      return return hp;
+      return hp;
+    }
+
+    public Map<String, Integer> getAbilities() {
+      return abilities;
+    }
+
+    public Map<String, List<Integer>> getDiceRolls() {
+      return diceRolls;
+    }
+
+    public List<String> getAbilityNames() {
+      return abilityNames;
     }
 }
 
