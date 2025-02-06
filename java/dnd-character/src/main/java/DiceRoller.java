@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Random;
 
 public class DiceRoller {
-  public Random random = new Random();
+  private final Random random = new Random();
 
   public List<Integer> roll4D6() {
     List<Integer> diceValues = new ArrayList<>();

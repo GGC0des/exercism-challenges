@@ -1,33 +1,28 @@
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
 
 class DnDCharacter {
   private final DiceRoller diceroller = new DiceRoller();
-  private int strength;
-  private int dexterity;
-  private int constitution;
-  private int intelligence;
-  private int wisdom;
-  private int charisma;
-  private int hp;
+  private final Map<String, Integer> abilities = new HashMap<>();
+  private final List<String> abilityNames = List.of("Strength", "Dexterity", "Constitution",
+        "Intelligence", "Wisdom", "Charisma");
+  private int HP;
 
   public DnDCharacter() {
-    initializeAbility();
+    initializeAbilities();
+    this.HP = 10 + modifier(getConstitution());
   }
 
-  private void initializeAbility() {
-    this.strength = ability(rollDice());
-    this.dexterity = ability(rollDice());
-    this.constitution = ability(rollDice());
-    this.intelligence = ability(rollDice());
-    this.wisdom = ability(rollDice());
-    this.charisma = ability(rollDice());
-    this.hp = 10 + modifier(getConstitution());
+  private void initializeAbilities() {
+    for (String ability : abilityNames) {
+      abilities.put(ability, ability(rollDice()));
+    }
   }
 
 
     protected int ability(List<Integer> scores) {
-      // System.out.println("You rolled " + scores.get(0) + ", " + scores.get(1) + ", " + scores.get(2) + ", " + scores.get(3) + ". Your " + abilityName + " is " + sum + " (" + scores.get(1) + "+" + scores.get(2) + "+" + scores.get(3) + ").");
+      System.out.println("You rolled " + scores.get(0) + ", " + scores.get(1) + ", " + scores.get(2) + ", " + scores.get(3) + ". Your " + abilityName + " is " + sum + " (" + scores.get(1) + "+" + scores.get(2) + "+" + scores.get(3) + ").");
       return scores.stream()                      // Convert immutable list into stream (or alternatively store in mutable new ArrayList)
                    .sorted((a,b) -> b - a)        // Sort in descending order
                    .limit(3)              // Use first 3 largest elements
@@ -46,31 +41,31 @@ class DnDCharacter {
     }
 
     int getStrength() {
-      return strength;
+      return abilities.get("Strength");
     }
 
     int getDexterity() {
-      return dexterity;
+      return abilities.get("Dexterity");
     }
 
     int getConstitution() {
-      return constitution;
+      return abilities.get("Constitution");
     }
 
     int getIntelligence() {
-      return intelligence;
+      return abilities.get("Intelligence");
     }
 
 
     int getWisdom() {
-      return wisdom;
+      return abilities.get("Wisdom");
     }
 
     int getCharisma() {
-      return charisma;
+      return abilities.get("Charisma");
     }
 
     int getHitpoints() {
-      return hp;
+      return HP;
     }
 }
