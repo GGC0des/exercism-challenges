@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DnDCharacterTest" tests="28" skipped="27" failures="1" errors="0" timestamp="2025-02-05T18:44:08" hostname="SHRSHY.fritz.box" time="1.73">
+<testsuite name="DnDCharacterTest" tests="28" skipped="27" failures="1" errors="0" timestamp="2025-02-05T19:13:26" hostname="SHRSHY.fritz.box" time="1.279">
   <properties/>
-  <testcase name="testAbilityCalculationsUses3LargestNumbersFromScoresInDescendingOrder()" classname="DnDCharacterTest" time="0.019">
+  <testcase name="testAbilityCalculationsUses3LargestNumbersFromScoresInDescendingOrder()" classname="DnDCharacterTest" time="0.028">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore3IsNegative4()" classname="DnDCharacterTest" time="0.632">
+  <testcase name="testAbilityModifierForScore3IsNegative4()" classname="DnDCharacterTest" time="0.47">
     <failure message="org.opentest4j.AssertionFailedError: &#10;expected: -4&#10; but was: -3" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
 expected: -4
  but was: -3
@@ -96,34 +96,34 @@ expected: -4
   <testcase name="testAbilityCalculationsUses3LargestNumbersFromScoresInRandomOrder()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore4IsNegative3()" classname="DnDCharacterTest" time="0.001">
+  <testcase name="testAbilityModifierForScore4IsNegative3()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore5IsNegative3()" classname="DnDCharacterTest" time="0.001">
+  <testcase name="testAbilityModifierForScore5IsNegative3()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore10Is0()" classname="DnDCharacterTest" time="0.001">
+  <testcase name="testAbilityModifierForScore10Is0()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore11Is0()" classname="DnDCharacterTest" time="0.002">
+  <testcase name="testAbilityModifierForScore11Is0()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore12Is1()" classname="DnDCharacterTest" time="0.0">
+  <testcase name="testAbilityModifierForScore12Is1()" classname="DnDCharacterTest" time="0.125">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore13Is1()" classname="DnDCharacterTest" time="0.002">
+  <testcase name="testAbilityModifierForScore13Is1()" classname="DnDCharacterTest" time="0.003">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore14Is2()" classname="DnDCharacterTest" time="0.0">
+  <testcase name="testAbilityModifierForScore14Is2()" classname="DnDCharacterTest" time="0.001">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore15Is2()" classname="DnDCharacterTest" time="0.001">
+  <testcase name="testAbilityModifierForScore15Is2()" classname="DnDCharacterTest" time="0.003">
     <skipped/>
   </testcase>
   <testcase name="testAbilityModifierForScore16Is3()" classname="DnDCharacterTest" time="0.001">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore17Is3()" classname="DnDCharacterTest" time="0.0">
+  <testcase name="testAbilityModifierForScore17Is3()" classname="DnDCharacterTest" time="0.001">
     <skipped/>
   </testcase>
   <testcase name="testAbilityModifierForScore18Is4()" classname="DnDCharacterTest" time="0.0">
@@ -135,22 +135,22 @@ expected: -4
   <testcase name="testAbilityModifierForScore6IsNegative2()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore7IsNegative2()" classname="DnDCharacterTest" time="0.0">
+  <testcase name="testAbilityModifierForScore7IsNegative2()" classname="DnDCharacterTest" time="0.008">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore8IsNegative1()" classname="DnDCharacterTest" time="0.002">
+  <testcase name="testAbilityModifierForScore8IsNegative1()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityModifierForScore9IsNegative1()" classname="DnDCharacterTest" time="0.0">
+  <testcase name="testAbilityModifierForScore9IsNegative1()" classname="DnDCharacterTest" time="0.001">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityCalculationsWithTwoLowestNumbers()" classname="DnDCharacterTest" time="0.0">
+  <testcase name="testAbilityCalculationsWithTwoLowestNumbers()" classname="DnDCharacterTest" time="0.003">
     <skipped/>
   </testcase>
-  <testcase name="testAbilityCalculationsUses3LargestNumbersFromFromScoresInAscendingOrder()" classname="DnDCharacterTest" time="0.001">
+  <testcase name="testAbilityCalculationsUses3LargestNumbersFromFromScoresInAscendingOrder()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testUniqueCharacterIsCreated()" classname="DnDCharacterTest" time="0.0">
+  <testcase name="testUniqueCharacterIsCreated()" classname="DnDCharacterTest" time="0.001">
     <skipped/>
   </testcase>
   <testcase name="testAbilityCalculationDoesNotChangeInputScores()" classname="DnDCharacterTest" time="0.0">
@@ -165,10 +165,10 @@ expected: -4
   <testcase name="testAbilityCalculationsWithHighestEqualNumbers()" classname="DnDCharacterTest" time="0.001">
     <skipped/>
   </testcase>
-  <testcase name="testDiceValuesBetween1And6()" classname="DnDCharacterTest" time="0.001">
+  <testcase name="testDiceValuesBetween1And6()" classname="DnDCharacterTest" time="0.003">
     <skipped/>
   </testcase>
-  <testcase name="test4DiceWereUsedForRollingScores()" classname="DnDCharacterTest" time="0.001">
+  <testcase name="test4DiceWereUsedForRollingScores()" classname="DnDCharacterTest" time="0.0">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>
