@@ -5,30 +5,32 @@ import java.util.Map;
 class DnDCharacter {
   private final DiceRoller diceroller = new DiceRoller();
   private final Map<String, Integer> abilities = new HashMap<>();
+  private Map<String, List<Integer>> diceRolls = new HashMap<>();
   private final List<String> abilityNames = List.of("Strength", "Dexterity", "Constitution",
         "Intelligence", "Wisdom", "Charisma");
-  private int HP;
+  private int hp;
 
   public DnDCharacter() {
     initializeAbilities();
-    this.HP = 10 + modifier(getConstitution());
+    this.hp = 10 + modifier(getAbilities().get("Constitution"));
   }
 
   private void initializeAbilities() {
-    for (String ability : abilityNames) {
-      abilities.put(ability, ability(rollDice()));
+    for (String abilityName : abilityNames) {
+      List<Integer> rolls = rollDice();
+      diceRolls.put(abilityName, rolls);
+      int abilityScore = ability(rolls);
+      abilities.put(abilityName, abilityScore);
     }
   }
 
 
     protected int ability(List<Integer> scores) {
-      int sum = scores.stream()                      // Convert immutable list into stream (or alternatively store in mutable new ArrayList)
-                      .sorted((a,b) -> b - a)        // Sort in descending order
-                      .limit(3)              // Use first 3 largest elements
-                      .mapToInt(Integer::intValue)   // Convert Integer objects to int primitives
-                      .sum();                        // Sum the values
-      System.out.println("You rolled " + scores.get(0) + ", " + scores.get(1) + ", " + scores.get(2) + ", " + scores.get(3) + ". Your " + abilityName + " is " + sum + " (" + scores.get(1) + "+" + scores.get(2) + "+" + scores.get(3) + ").");
-      return sum;
+      return scores.stream()                      // Convert immutable list into stream (or alternatively store in mutable new ArrayList)
+                   .sorted((a,b) -> b - a)        // Sort in descending order
+                   .limit(3)              // Use first 3 largest elements
+                   .mapToInt(Integer::intValue)   // Convert Integer objects to int primitives
+                   .sum();                        // Sum the values
     }
 
 
@@ -67,6 +69,18 @@ class DnDCharacter {
     }
 
     int getHitpoints() {
-      return HP;
+      return hp;
+    }
+
+    public Map<String, Integer> getAbilities() {
+      return abilities;
+    }
+
+    public Map<String, List<Integer>> getDiceRolls() {
+      return diceRolls;
+    }
+
+    public List<String> getAbilityNames() {
+      return abilityNames;
     }
 }
