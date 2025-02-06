@@ -5,10 +5,10 @@ import java.util.Map;
 class DnDCharacter {
   private final DiceRoller diceroller = new DiceRoller();
   private final Map<String, Integer> abilities = new HashMap<>();
-  private Map<String, List<Integer>> diceRolls = new HashMap<>();
+  private final Map<String, List<Integer>> diceRolls = new HashMap<>();
   private final List<String> abilityNames = List.of("Strength", "Dexterity", "Constitution",
         "Intelligence", "Wisdom", "Charisma");
-  private int hp;
+  private final int hp;
 
   public DnDCharacter() {
     initializeAbilities();
