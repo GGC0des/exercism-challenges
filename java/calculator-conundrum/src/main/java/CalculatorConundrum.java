@@ -1,5 +1,10 @@
 class CalculatorConundrum {
     public String calculate(int operand1, int operand2, String operation) {
-        throw new UnsupportedOperationException("Please implement the CalculatorConundrum.calculate() method");
+        return switch (operation) {
+            case "+" -> operand1 + " + " + operand2 + " = " + (operand1 + operand2);
+            case "*" -> operand1 + " * " + operand2 + " = " + (operand1 * operand2);
+            case "/" -> operand1 + " / " + operand2 + " = " + (operand1 / operand2);
+            default -> "Default";
+        };
     }
 }
