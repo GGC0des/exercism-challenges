@@ -1,10 +1,16 @@
-public class ExperimentalRemoteControlCar {
+public class ExperimentalRemoteControlCar implements RemoteControlCar {
+    private int dinstanceTravelled;
 
+    public ExperimentalRemoteControlCar() {
+      this.dinstanceTravelled = 0;
+    }
+    @Override
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ExperimentalRemoteControlCar.drive() method");
+        dinstanceTravelled += 20;
     }
 
+    @Override
     public int getDistanceTravelled() {
-        throw new UnsupportedOperationException("Please implement the ExperimentalRemoteControlCar.getDistanceTravelled() method");
+        return dinstanceTravelled;
     }
 }
