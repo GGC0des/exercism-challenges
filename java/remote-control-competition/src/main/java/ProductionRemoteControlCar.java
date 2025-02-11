@@ -1,5 +1,6 @@
-class ProductionRemoteControlCar implements RemoteControlCar {
-    private int distanceTravelled;
+class ProductionRemoteControlCar implements RemoteControlCar, Comparable<ProductionRemoteControlCar> {
+  private int distanceTravelled;
+  public int victories;
 
     public ProductionRemoteControlCar() {
       this.distanceTravelled = 0;
@@ -17,10 +18,15 @@ class ProductionRemoteControlCar implements RemoteControlCar {
     }
 
     public int getNumberOfVictories() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getNumberOfVictories() method");
+        return victories;
     }
 
     public void setNumberOfVictories(int numberOfVictories) {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.setNumberOfVictories() method");
+        this.victories = numberOfVictories;
+    }
+
+    @Override
+    public int compareTo(ProductionRemoteControlCar otherCar) {
+      return Integer.compare(otherCar.getNumberOfVictories(), this.getNumberOfVictories()); // descending order
     }
 }
