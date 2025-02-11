@@ -1,9 +1,11 @@
-class ProductionRemoteControlCar {
+class ProductionRemoteControlCar implements RemoteControlCar {
 
+    @Override
     public void drive() {
         throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.drive() method");
     }
 
+    @Override
     public int getDistanceTravelled() {
         throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getDistanceTravelled() method");
     }
