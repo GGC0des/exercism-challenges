@@ -1,13 +1,19 @@
 class ProductionRemoteControlCar implements RemoteControlCar {
+    private int distanceTravelled;
+
+    public ProductionRemoteControlCar() {
+      this.distanceTravelled = 0;
+    }
+
 
     @Override
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.drive() method");
+      distanceTravelled += 10;
     }
 
     @Override
     public int getDistanceTravelled() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getDistanceTravelled() method");
+      return distanceTravelled;
     }
 
     public int getNumberOfVictories() {
