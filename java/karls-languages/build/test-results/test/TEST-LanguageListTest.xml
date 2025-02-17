@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LanguageListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-24T16:31:28" hostname="SHRSHY.fritz.box" time="0.132">
+  <properties/>
+  <testcase name="The isExciting method returns false when the list contains neither Java nor Kotlin" classname="LanguageListTest" time="0.132"/>
+  <system-out><![CDATA[[Python]
+[Python, Ruby]
+[Python, Ruby, C++]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
