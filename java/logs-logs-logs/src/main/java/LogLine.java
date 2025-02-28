@@ -14,7 +14,7 @@ public class LogLine {
           case "WRN" -> LogLevel.WARNING;
           case "ERR" -> LogLevel.ERROR;
           case "FTL" -> LogLevel.FATAL;
-          default -> throw new IllegalAccessException("Unknown log level: " + lvl);
+          default -> LogLevel.UNKNOWN;
         };
     }
 
