@@ -19,6 +19,6 @@ public class LogLine {
     }
 
     public String getOutputForShortLog() {
-        return getLogLevel().getShortFormat() + ": " + logLine.split(":")[1].trim();
+        return getLogLevel().getShortFormat() + ":" + logLine.split(":")[1].trim();
     }
 }
