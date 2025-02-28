@@ -5,7 +5,7 @@ public class LogLine {
         this.logLine = logLine;
     }
 
-    public LogLevel getLogLevel() throws IllegalAccessException {
+    public LogLevel getLogLevel() {
         String lvl = logLine.substring(1,4);
         return switch (lvl) {
           case "TRC" -> LogLevel.TRACE;
@@ -19,6 +19,6 @@ public class LogLine {
     }
 
     public String getOutputForShortLog() {
-        throw new UnsupportedOperationException("Please implement the getOutputForShortLog() method");
+        return getLogLevel().getShortFormat() + ": " + logLine.split(":")[1].trim();
     }
 }
