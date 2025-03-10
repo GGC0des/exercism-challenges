@@ -1,16 +1,16 @@
 import java.util.Map;
+import java.util.HashMap;
 
 public class DialingCodes {
 
-    private Map<Integer, String> dialingCodes = new HashMap<>();
+    private final Map<Integer, String> listOfCodes = new HashMap<>();
 
     public Map<Integer, String> getCodes() {
-        return dialingCodes;
+        return listOfCodes;
     }
 
     public void setDialingCode(Integer code, String country) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+        listOfCodes.put(code, country);
     }
 
     public String getCountry(Integer code) {
