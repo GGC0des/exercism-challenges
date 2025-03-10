@@ -14,8 +14,7 @@ public class DialingCodes {
     }
 
     public String getCountry(Integer code) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+        return listOfCodes.get(code);
     }
 
     public void addNewDialingCode(Integer code, String country) {
