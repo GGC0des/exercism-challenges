@@ -36,12 +36,18 @@ public class DialingCodes {
     }
 
     public Integer findDialingCode(String country) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+      return listOfCodes.entrySet().stream()
+                        .filter(entry -> entry.getValue().equals(country))
+                        .map(Map.Entry::getKey)
+                        .findFirst()
+                        .orElse(null);
     }
 
     public void updateCountryDialingCode(Integer code, String country) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+        Integer existingCode = findDialingCode(country);
+        if (existingCode != null) {
+          listOfCodes.remove(existingCode);
+        }
+        setDialingCode(code, country);
     }
 }
