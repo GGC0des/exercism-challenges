@@ -1,40 +1,37 @@
-# Exercism Java Track ☕️
+# Exercism Coding Challenges
 
-Exercism's Java track offers a total of 148 coding challenges to master Java fluency.
-Once the test of a coding challenge is passed and submitted the next concept & exercises are unlocked. 
-See [Exercism Java Track](https://exercism.org/tracks/java) for more info.
+Welcome to my **Exercism Challenges** repository! 🚀  
 
-Find my coding solutions to different exercises here on [Github](https://github.com/GGC0des/Exercism-Java/tree/main/java) or [my Exercism profile](https://exercism.org/profiles/GGC0des). 
+This repository contains my solutions to coding challenges from [Exercism](https://exercism.org/) - a platfrom that provides hands-on coding exercises with mentor feedback, helping developers learn new languages and improve their coding proficiency. 
 
-## Concepts covered by coding challenges
+### 🏅 **23 Rep for solving Java challenges** - find them [here](https://github.com/GGC0des/exercism-challenges/tree/main/java#exercism-java-track-%EF%B8%8F)
 
-Currently solved challenges address:
+## 🎯 Goal
+The goal is to enhance my problem-solving skills, explore different programming paradigms, and document my learning journey across multiple languages.
 
-* Java Basics
-  - String Methods to format log messages
-  - Implemented non-void methods with and without parameters
-* Primitive Data Types
-* Conditional Logic
-  -  if-else statements for different production rates based on changing variables, handling errors with System.err.println, turnication of double to int value
-* Booleans
-  - Implemented boolean operators to calculate boolean value depending on multipe arguments
-* Arrays
-* For Loop, For-Each Loop
-* Mutability vs. Immutablity
-  - Return a clone to prevent external modification of the internal array
-* Chars
-  - Implemented camelCase conversion, leetspeak conversion, alternative Stringbuilder solution through concatenation
-* Generic Types
-* Lists
-* Ternary Operators
-  - Second iteration to return ternary operational value in return statement instead of storing it in a variable first
-* Nullability
-* Classes & Constructors
-  - Implemented private vs. public fields, constructor, getter & setter methods, conditional logic to update instance fields depending on its value and a limiter
-  - Refactored code in second iteration to use format specifiers instead of concatenating the String in the return statement
-  - Refactored code in secod iteration of NeedForSpeed challenge to use public methods and getter methods instead of instance fields (now private) to impelement canFinishRace() method in RaceTrack class 
-* Inheritance
-  - Override superclass methods for its subclasses
-* Randomness in Java
-* Date-Time
-  - Ensured default Locale formatting bug is fixed 
+
+## 📈 Progress & Tracking
+I update this repository as I complete new challenges. Check out the language folders for solutions and insights!
+Here, you'll find my solutions categorized by language and track.
+
+## 📂 Repository Structure
+```
+exercism-challenges/
+│── language-1/
+│   ├── challenge-1.ext
+│   ├── challenge-2.ext
+│── language-2/
+│   ├── challenge-1.ext
+│   ├── challenge-2.ext
+│── ...
+```
+- Each language has its own directory.
+- Each challenge includes my solution and, when applicable, explanations or alternative approaches.
+
+---
+
+## Contributions
+This repository is a personal learning project, but feel free to fork it and use the solutions as references. If you have suggestions for improvements, feel free to open an issue!
+
+## 🌍 Connect
+- **Exercism Profile:** [Link to your Exercism Profile]  
