@@ -1,11 +1,11 @@
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.HashSet;
 
 class GottaSnatchEmAll {
 
     static Set<String> newCollection(List<String> cards) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.newCollection() method");
+        return new HashSet<>(cards) ; // Set<String> collectionSet = new HashSet<>(cards);
     }
 
     static boolean addCard(String card, Set<String> collection) {
