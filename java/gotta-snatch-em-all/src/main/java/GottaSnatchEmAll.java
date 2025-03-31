@@ -32,6 +32,10 @@ class GottaSnatchEmAll {
     }
 
     static Set<String> allCards(List<Set<String>> collections) {
-        
+        Set<String> allCardsCombined = new HashSet<>();
+        for (Set<String> collection : collections) {
+          allCardsCombined.addAll(collection);
+        }
+        return allCardsCombined;
     }
 }
