@@ -5,7 +5,7 @@ import java.util.Set;
 class GottaSnatchEmAll {
 
     static Set<String> newCollection(List<String> cards) {
-        return new HashSet<>(cards); 
+        return new HashSet<>(cards);
     }
 
     static boolean addCard(String card, Set<String> collection) {
@@ -21,10 +21,17 @@ class GottaSnatchEmAll {
     }
 
     static Set<String> commonCards(List<Set<String>> collections) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.commonCards() method");
+        Set<String> commonCardsSet = new HashSet<>();
+        if (!collections.isEmpty()) {
+          commonCardsSet.addAll(collections.get(0));
+          for (Set<String> collection : collections) {
+            commonCardsSet.retainAll(collection); // value is the intersection of the sets
+          }
+        }
+        return commonCardsSet;
     }
 
     static Set<String> allCards(List<Set<String>> collections) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.allCards() method");
+        
     }
 }
