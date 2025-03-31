@@ -5,15 +5,19 @@ import java.util.Set;
 class GottaSnatchEmAll {
 
     static Set<String> newCollection(List<String> cards) {
-        return new HashSet<>(cards) ; // Set<String> collectionSet = new HashSet<>(cards);
+        return new HashSet<>(cards); 
     }
 
     static boolean addCard(String card, Set<String> collection) {
-        return !collection.contains(card) ? collection.add(card) && true : false;
+        return collection.add(card);
     }
 
     static boolean canTrade(Set<String> myCollection, Set<String> theirCollection) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.canTrade() method");
+        Set<String> myUniqueCards = new HashSet<>(myCollection);
+        myUniqueCards.removeAll(theirCollection);
+        Set<String> theirUniqueCards = new HashSet<>(theirCollection);
+        theirUniqueCards.removeAll(myCollection);
+        return !myUniqueCards.isEmpty() && !theirUniqueCards.isEmpty();
     }
 
     static Set<String> commonCards(List<Set<String>> collections) {
