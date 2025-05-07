@@ -10,9 +10,15 @@ public class GameMaster {
       + " inhabitants.";
     }
 
-    // TODO: define a 'describe' method that returns a description of a TravelMethod
+    public String describe(TravelMethod method) {
+      return method.getDescription();
+    }
 
-    // TODO: define a 'describe' method that returns a description of a Character, Destination and TravelMethod
+    public String describe(Character character, Destination destination, TravelMethod method) {
+      return describe(character) + " " + describe(method) + " " + describe(destination);
+    }
 
-    // TODO: define a 'describe' method that returns a description of a Character and Destination
+    public String describe(Character character, Destination destination) {
+      return describe(character, destination, TravelMethod.WALKING);
+    }
 }
