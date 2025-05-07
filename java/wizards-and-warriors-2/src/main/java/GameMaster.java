@@ -11,7 +11,10 @@ public class GameMaster {
     }
 
     public String describe(TravelMethod method) {
-      return method.getDescription();
+      switch (method) {
+        case WALKING: return "You're walking.";
+        case HORSEBACK: return "You're on horseback.";
+        // default: throw new IllegalArgumentException("Unknown travel method");
     }
 
     public String describe(Character character, Destination destination, TravelMethod method) {
