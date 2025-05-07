@@ -15,6 +15,7 @@ public class GameMaster {
         case WALKING: return "You're walking.";
         case HORSEBACK: return "You're on horseback.";
         // default: throw new IllegalArgumentException("Unknown travel method");
+      }
     }
 
     public String describe(Character character, Destination destination, TravelMethod method) {
